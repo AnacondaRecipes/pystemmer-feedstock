@@ -1,0 +1,44 @@
+{% set name = "pystemmer" %}
+{% set version = "2.2.0.1" %}
+
+package:
+  #  name: "{{ name|lower }}"
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  #  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  #  sha256: 9f3b366f1ed06b49dc1868bf0aefd884423db80f3431be442d0f993e448cc67b
+  url: "https://files.pythonhosted.org/packages/01/5e/d2db082b8da23972a434aeda9180864f825478b7bf3b5f035c2007e2a0bd/PyStemmer-2.2.0.1.tar.gz"
+  sha256: 9f3b366f1ed06b49dc1868bf0aefd884423db80f3431be442d0f993e448cc67b
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
+
+requirements:
+  host:
+    - pip
+    - python
+    - Cython <1.0,>=0.28.5
+    - {{ compiler("c") }}
+  run:
+    - python
+
+about:
+  home: "https://github.com/snowballstem/pystemmer/"
+  license: MIT License or BSD
+  license_family: BSD
+  license_file:
+  summary: "Snowball stemming algorithms, for information retrieval"
+  doc_url:
+  dev_url:
+
+extra:
+  extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/49522
+    reason: Dependency for fastembed
+    recipe-maintainers:
+      - ianaobi
+      - bkreider
