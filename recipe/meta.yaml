@@ -35,7 +35,6 @@ about:
   dev_url:
 
 extra:
-  extra:
   anaconda-services:
     ref: https://anaconda.zendesk.com/agent/tickets/49522
     reason: Dependency for fastembed
