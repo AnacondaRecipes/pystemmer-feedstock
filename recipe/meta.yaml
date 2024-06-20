@@ -9,6 +9,7 @@ package:
 source:
   #  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   #  sha256: 9f3b366f1ed06b49dc1868bf0aefd884423db80f3431be442d0f993e448cc67b
+
   url: "https://files.pythonhosted.org/packages/01/5e/d2db082b8da23972a434aeda9180864f825478b7bf3b5f035c2007e2a0bd/PyStemmer-2.2.0.1.tar.gz"
   folder: .
   sha256: 9f3b366f1ed06b49dc1868bf0aefd884423db80f3431be442d0f993e448cc67b
